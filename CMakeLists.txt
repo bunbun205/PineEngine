@@ -7,5 +7,7 @@ if(WIN32)
 	set(PINE_PLATFORM_WINDOWS ON)
 endif()
 
+find_package(glfw3 REQUIRED)
+
 add_subdirectory(Pine)
 add_subdirectory(Sandbox)

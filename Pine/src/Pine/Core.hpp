@@ -13,3 +13,13 @@
 		#define PINE_API
 	#endif
 #endif
+
+#ifdef PINE_ENABLE_ASSERTS
+	#define PINE_ASSERT(x, ...) { if(!(x)) { PINE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define PINE_CORE_ASSERT(x, ...) { if(!(x)) { PINE_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#else
+	#define PINE_ASSERT(x, ...)
+	#define PINE_CORE_ASSERT(x, ...)
+#endif
+
+#define BIT(x) (1 << x)

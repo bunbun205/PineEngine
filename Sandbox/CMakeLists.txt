@@ -9,9 +9,10 @@ target_include_directories(
 	Sandbox
 	PRIVATE
 		${CMAKE_SOURCE_DIR}/Pine/src
+        ${CMAKE_SOURCE_DIR}/extern/spdlog/include
 )
 
-target_link_libraries(Sandbox Pine)
+target_link_libraries(Sandbox Pine glfw GL)
 
 set_target_properties(
     Pine PROPERTIES

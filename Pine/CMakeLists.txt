@@ -7,10 +7,17 @@ set(PINE_BUILD_SHARED ON)
 
 add_library(Pine SHARED ${Pine_SOURCE})
 
+target_precompile_headers(
+    Pine
+    PRIVATE
+        src/pinepch.hpp
+)
+
 target_include_directories(
 	Pine
 	PRIVATE
 		${CMAKE_SOURCE_DIR}/Pine/src
+        ${CMAKE_SOURCE_DIR}/extern/spdlog/include
 )
 
 set_target_properties(
