@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/Sandbox.dir/link.d CMakeFiles/Sandbox.dir/src/App.cpp.o -o Sandbox  -Wl,-rpath,/mnt/wwn-0x50014ee2165bc1f4-part1/Dev/PineEngine/bin/Pine ../Pine/libPine.so /usr/lib64/libglfw.so.3.4 -lGL
